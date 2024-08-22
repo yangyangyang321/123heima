@@ -1,0 +1,270 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, MicrosoftYaHei;
+}
+
+a {
+    text-decoration: none;
+    color: #707070;
+}
+
+@media screen and (min-width:750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+
+@media screen and(max-width:320px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
+.warp {
+
+    // 头部
+    .header {
+        // position: fixed;
+        width: 100%;
+        height: 2.1333rem;
+        font-size: .9333rem;
+        line-height: 2.1333rem;
+        border-bottom: .0133rem solid #f2f4f7;
+        text-align: center;
+
+    }
+
+    // 导航栏
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: .2667rem 0;
+
+        a {
+            display: flex;
+            flex: 33.33%;
+            // 设置成Y轴
+            flex-direction: column;
+            // 对齐
+            align-items: center;
+
+            img {
+                width: 4rem;
+                height: 4rem;
+                margin: 1.0667rem auto;
+            }
+
+            span {
+                font-size: .6667rem;
+            }
+
+            &:nth-child(-n+3) {
+                margin-bottom: 1.0667rem;
+            }
+        }
+    }
+
+    // GO模块
+    .go {
+        margin: 2.6667rem .5333rem;
+    }
+}
+
+.content {
+    border-top: .2667rem solid #f2f4f7;
+    background-color: #fff;
+
+    .con-hd {
+        display: flex;
+        width: 100%;
+        margin: 1.0667rem 0;
+
+        // background-color: pink;
+
+
+        .icon {
+            width: 1.0133rem;
+            height: 1.0133rem;
+            margin: 0 0.5333rem;
+            text-align: center;
+        }
+
+        h4 {
+            flex: 1;
+            font-size: .7467rem;
+            margin: 0;
+        }
+
+        .more {
+            margin: .1333rem 0.8rem 0;
+            font-size: .5867rem;
+
+
+        }
+
+    }
+}
+
+// 旋转木马轮播图
+.get_job_focus {
+    position: relative;
+
+    div[class^="swiper-button"] {
+        color: #000;
+    }
+
+    .swiper-container {
+        width: 14.4rem;
+        height: 100%;
+
+    }
+
+    .swiper-slide {
+        flex-direction: column;
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        //整向显示
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.7);
+        opacity: 0.5;
+
+        a {
+            width: 9.0133rem;
+            // height: 10.0267rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            p {
+                width: 9.0133rem;
+                font: size .8rem;
+                margin-top: .64rem;
+                color: #333;
+                margin: .5rem auto;
+            }
+        }
+    }
+
+    //当前选定的照片，中间的
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+        transform: scale(1);
+        z-index: 999;
+        opacity: 1;
+    }
+}
+
+.study_fo {
+    width: 19rem;
+    padding: .2667rem;
+
+    .swiper-slide {
+        display: flex;
+        text-align: center;
+        font-size: 18px;
+        height: 8rem;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        border-radius: .1067rem;
+        margin-bottom: 3.5rem;
+
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 0 .2rem;
+        }
+
+        h4 {
+            font-size: .65rem;
+            text-align: left;
+            font-weight: 500;
+            margin: 0;
+            padding: .2rem .2rem;
+            color: #333;
+        }
+
+
+        span {
+            font-size: .65rem;
+            margin-left: -3rem;
+            color: #999;
+
+            p {
+                display: inline-block;
+                color: red;
+
+            }
+        }
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 20rem;
+    height: 3.0667rem;
+    background-color: #fff;
+    z-index: 999;
+    border-top: .0133rem solid #f2f4f7;
+    margin: 0 auto;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        &:nth-child(1) span {
+            background-image: linear-gradient(to top, #2ccac7, #52c4f0);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        img {
+            width: 1.04rem;
+            height: 1.0933rem;
+
+        }
+
+        span {
+            margin-top: .2rem;
+            font-size: .5867rem;
+
+
+        }
+    }
+
+}
